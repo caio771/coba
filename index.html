@@ -1,96 +1,87 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAIO</title>
-</head>
-    <style>
-    body {
-        background-color: #0e0d0d;
-        margin: 0;
-        color: white;
-        font-family: Arial, sans-serif;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAIO</title>
+
+<style>
+body {
+    background-color: #0e0d0d;
+    margin: 0;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* TOPO */
+.topo {
+    display: flex;
+    align-items: center;
+    background-color: #000;
+}
+
+.logo {
+    padding: 10px;
+}
+
+.logo img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+.banner {
+    flex: 1;
+}
+
+.banner video {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* LAYOUT PRINCIPAL */
+.container {
+    display: flex;
+    min-height: calc(100vh - 150px);
+}
+
+/* MENU */
+.menu {
+    width: 220px;
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu a {
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    border-bottom: 1px solid #333;
+    text-align: center;
+}
+
+.menu a:hover {
+    background-color: #1a1a1a;
+}
+
+/* CONTEÚDO */
+.conteudo {
+    flex: 1;
+}
+
+.conteudo iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* 📱 RESPONSIVO */
+@media (max-width: 768px) {
+
+    .topo {
+        flex-direction: column;
     }
-</style>
-<body>
-    <h1></h1>
-    <style>
-    
-        
-        table{
-            border-collapse: collapse;
-        }
-        td{
-            border: 0px solid rgb(255, 255, 255);
-            width: 0px;
-            margin: auto;
-        }
-        .topo {
-            height: 100px;
-        }
-        .fundo {
-            height: 900px;
-        }
-        .coluna-logo {
-            width: 340x;
-            height: 40px;
-        }
-        .coluna-banner{
-            width: 1880px;
-            height: 400px;
-        }
 
-        video {
-            width: 100%;
-            height: 100%;
-            object-fit: fill;
-            display: block;
-        }
-
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        .menu-link {
-            display: block;
-            color:white;
-            padding: 15px;
-            text-decoration: none;
-            border-bottom: 1px solid #333;
-        }
-        .menu-link:hover {background-color: #1a1a1a;}
-    </style>
-    <table>
-  <tr>
-    <td class="topo coluna-logo">
-        <img src="logo6.PNG" style="width: 340px; height: 340px;">
-    </td>
-    <td class="topo coluna-banner">
-        <video autoplay loop muted playsinline="1280">
-            <source src="banner2.mp4">
-        </video>
-    </td>
-  </tr>
-  <tr> 
-    <td class="fundo"> 
-        <a href="pagina2.html" target="conteudo" class="menu-link">MESSI</a>
-        <a href="pagina1.html" target="conteudo" class="menu-link">MBAPPE</a>
-        <a href="pagina4.html" target="conteudo" class="menu-link">PELÉ</a>
-        <a href="pagina3.html" target="conteudo" class="menu-link">NEYMAR</a>
-        <a href="https://forms.gle/RBWTdPqaTyN9aHHQ7">Fale conosco !</a>   
-      
-        
-    </td>
-    <td class="fundo">
-        <iframe name="conteudo" src="about:blank"></iframe>
-  </tr>
-    </td>
-        
-  </tr>
-</table>
-</body>
-</html>
+    .
