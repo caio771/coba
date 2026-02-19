@@ -135,4 +135,48 @@ main {
         <img src="logo6.PNG">
     </div>
 
-    <div class=
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+    <nav>
+        <a href="pagina2.html">MESSI</a>
+        <a href="pagina1.html">MBAPPE</a>
+        <a href="pagina4.html">PELÉ</a>
+        <a href="pagina3.html">NEYMAR</a>
+        <a href="https://forms.gle/RBWTdPqaTyN9aHHQ7">Fale conosco</a>
+    </nav>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+    <a href="pagina2.html">MESSI</a>
+    <a href="pagina1.html">MBAPPE</a>
+    <a href="pagina4.html">PELÉ</a>
+    <a href="pagina3.html">NEYMAR</a>
+    <a href="https://forms.gle/RBWTdPqaTyN9aHHQ7">Fale conosco</a>
+</div>
+
+<section class="banner">
+    <video autoplay loop muted playsinline>
+        <source src="banner2.mp4">
+    </video>
+</section>
+
+<main>
+    <h1>Bem-vindo</h1>
+    <p>Escolha um jogador:</p>
+
+    <div class="cards">
+        <div class="card" onclick="location.href='pagina2.html'">MESSI</div>
+        <div class="card" onclick="location.href='pagina1.html'">MBAPPE</div>
+        <div class="card" onclick="location.href='pagina4.html'">PELÉ</div>
+        <div class="card" onclick="location.href='pagina3.html'">NEYMAR</div>
+    </div>
+</main>
+
+<script>
+function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
