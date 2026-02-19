@@ -7,52 +7,98 @@
 
 <style>
 body{
-    margin:0;
-    font-family: Arial, sans-serif;
     background:#0e0d0d;
+    margin:0;
     color:white;
+    font-family:Arial, sans-serif;
+}
+
+/* TOPO */
+.topo{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.logo{
+    flex:1 1 250px;
     text-align:center;
 }
 
-header{
-    background:#000;
-    padding:15px;
+.logo img{
+    width:100%;
+    max-width:200px;
+    height:auto;
 }
 
-.logo img{
-    height:60px;
+.banner{
+    flex:3 1 500px;
 }
 
 .banner video{
     width:100%;
-    max-height:250px;
+    height:200px;
     object-fit:cover;
 }
 
-.menu{
+/* LAYOUT */
+.container{
     display:flex;
     flex-wrap:wrap;
-    justify-content:center;
-    gap:10px;
-    padding:20px;
+}
+
+/* MENU */
+.menu{
+    flex:1 1 200px;
+    background:#111;
 }
 
 .menu a{
-    background:#111;
-    padding:15px 25px;
-    text-decoration:none;
+    display:block;
     color:white;
-    border-radius:8px;
-    transition:.3s;
+    padding:15px;
+    text-decoration:none;
+    border-bottom:1px solid #333;
+    text-align:center;
 }
 
 .menu a:hover{
     background:#1a1a1a;
 }
 
-@media(max-width:600px){
+/* CONTEÚDO */
+.conteudo{
+    flex:3 1 500px;
+}
+
+.conteudo iframe{
+    width:100%;
+    height:600px;
+    border:none;
+}
+
+/* 📱 MOBILE */
+@media(max-width:768px){
+
+    .topo{
+        flex-direction:column;
+    }
+
+    .banner video{
+        height:150px;
+    }
+
+    .menu{
+        display:flex;
+        flex-wrap:wrap;
+    }
+
     .menu a{
-        width:90%;
+        flex:1 1 50%;
+        border:1px solid #333;
+    }
+
+    .conteudo iframe{
+        height:500px;
     }
 }
 </style>
@@ -60,26 +106,32 @@ header{
 
 <body>
 
-<header>
+<div class="topo">
     <div class="logo">
         <img src="logo6.PNG">
     </div>
-</header>
 
-<div class="banner">
-    <video autoplay loop muted playsinline>
-        <source src="banner2.mp4">
-    </video>
+    <div class="banner">
+        <video autoplay loop muted playsinline>
+            <source src="banner2.mp4">
+        </video>
+    </div>
 </div>
 
-<h1>Escolha um jogador</h1>
+<div class="container">
 
-<div class="menu">
-    <a href="pagina1.html">MBAPPE</a>
-    <a href="pagina2.html">MESSI</a>
-    <a href="pagina3.html">NEYMAR</a>
-    <a href="pagina4.html">PELÉ</a>
-    <a href="https://forms.gle/RBWTdPqaTyN9aHHQ7">Fale conosco</a>
+    <div class="menu">
+        <a href="pagina2.html" target="conteudo">MESSI</a>
+        <a href="pagina1.html" target="conteudo">MBAPPE</a>
+        <a href="pagina4.html" target="conteudo">PELÉ</a>
+        <a href="pagina3.html" target="conteudo">NEYMAR</a>
+        <a href="https://forms.gle/RBWTdPqaTyN9aHHQ7">Fale conosco</a>
+    </div>
+
+    <div class="conteudo">
+        <iframe name="conteudo" src="pagina2.html"></iframe>
+    </div>
+
 </div>
 
 </body>
